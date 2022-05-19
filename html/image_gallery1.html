@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image gallery</title>
+    <link rel="stylesheet" href="../css/image_gallery1.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="full-img" id="fullImgBox">
+      <img src="images/images/darjeeling.jpg" id="fullImg" />
+      <span onclick="closeFullImg()">X</span>
+    </div>
+    <!-- header section starts -->
+    <header>
+      <div id="menu-bar" class="fas fa-bars"></div>
+
+      <a href="#" class="logo"><span>Y</span>ATRA</a>
+      <nav class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="./explore_page.html">Explore</a>
+        <!-- <a href="#Packages">Packages</a> -->
+        <!-- <a href="#Services">Services</a> -->
+        <a href="./image_gallery1.html">Gallery</a>
+        <a href="#Contact">Contact</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+      </div>
+      <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here....." />
+        <label for="search-bar" class="search-bar-container"></label>
+      </form>
+    </header>
+    <!-- header section ends -->
+    <!-- <h1 align="center" style="margin-top:40px;">Gallery</h1> -->
+    <div class="img-gallery">
+      <img src="../assets/darjeeling.jpg" onclick="openFullImg(this.src)" />
+      <img src="../assets//fort_at_night.jpg" onclick="openFullImg(this.src)" />
+      <img src="../assets/tajmahal.jpg" onclick="openFullImg(this.src)" />
+      <img src="../assets/golden_temple.jpg" onclick="openFullImg(this.src)" />
+      <img src="../assets/jhansi-1.jpg" onclick="openFullImg(this.src)" />
+      <img
+        src="../assets/vrindavan-temple.jpg"
+        onclick="openFullImg(this.src)"
+      />
+      <img src="../assets/gatewayofindia.jpg" onclick="openFullImg(this.src)" />
+      <img
+        src="../assets/jalmandir-pawapuri.jpg"
+        onclick="openFullImg(this.src)"
+      />
+      <img src="../assets/gaya-bihar.jpg" onclick="openFullImg(this.src)" />
+      <img
+        src="../assets/fatehpur-sikri-2.jpg"
+        onclick="openFullImg(this.src)"
+      />
+      <img
+        src="../assets/vrindavan-temple.jpg"
+        onclick="openFullImg(this.src)"
+      />
+      <img src="../assets/gaya-bihar.jpg" onclick="openFullImg(this.src)" />
+    </div>
+
+    <!-- footer section start -->
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>About Us</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+            consequatur enim recusandae voluptatem aliquam! Magni a facere quia.
+            Animi quibusdam quia corporis eaque, ipsum a temporibus culpa
+            distinctio necessitatibus velit!
+          </p>
+        </div>
+        <div class="box">
+          <h3>Branch locations</h3>
+          <a href="#">Bihar</a>
+          <a href="#">Uttar Pradesh</a>
+          <a href="#">Haryana</a>
+          <a href="#">Andhra Pradesh</a>
+          <a href="#">Jharkhand</a>
+        </div>
+        <div class="box">
+          <h3>Quick links</h3>
+          <a href="#">Home</a>
+          <a href="#">Book</a>
+          <a href="#">Packages</a>
+          <a href="#">Services</a>
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="box">
+          <h3>Follow Us</h3>
+          <!-- <a href="#">facebook</a> -->
+          <i class="fa-brands fa-facebook"></i>
+          <!-- <a href="#">instagram</a> -->
+          <i class="fa-brands fa-instagram"></i>
+          <!-- <a href="#">twitter</a> -->
+          <i class="fa-brands fa-twitter"></i>
+          <!-- <a href="#">linkedin</a> -->
+          <i class="fa-brands fa-linkedin"></i>
+          <!-- <a href="#">github</a> -->
+          <i class="fa-brands fa-github"></i>
+        </div>
+      </div>
+      <div>
+        <h1 class="credit">
+          <p>&copy;Copyright | Tour and Travel 2022. All Right Reserved</p>
+        </h1>
+      </div>
+    </section>
+
+    <script>
+      var fullImgBox = document.getElementById("fullImgBox");
+      var fullImg = document.getElementById("fullImg");
+
+      function openFullImg(pic) {
+        fullImgBox.style.display = "flex";
+        fullImg.src = pic;
+      }
+
+      function closeFullImg() {
+        fullImgBox.style.display = "none";
+      }
+    </script>
+    <script src="../script.js"></script>
+  </body>
+</html>

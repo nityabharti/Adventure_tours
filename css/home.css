@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Nunito:wght@600;700;800&display=swap");
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+*::selection {
+  color: #fff;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+section {
+  padding: 2rem 9%;
+}
+.heading {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+.heading span {
+  font-size: 3.5rem;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+}
+.logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #fff;
+  text-transform: uppercase;
+}
+.logo span {
+  color: orangered;
+}
+.navbar a {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0.8rem;
+}
+.navbar a:hover {
+  color: orangered;
+}
+.icons i {
+  font-size: 2.5rem;
+  margin: 0.8rem;
+  color: #fff;
+}
+.icons i:hover {
+  color: orangered;
+}
+.search-bar-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  background: #333;
+  border-top: 0.1rem solid rgba(225, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.search-bar-container.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.search-bar-container #search-bar {
+  width: 100%;
+  padding: 1rem;
+  text-transform: none;
+  color: #333;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+}
+.search-bar-container label {
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+.search-bar-container label:hover {
+  color: orangered;
+}
+#menu-bar {
+  color: #fff;
+  border: 0.4rem solid #fff;
+  border-radius: 2rem;
+  font-size: 3rem;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+.Home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  /* border: 7px solid black; */
+}
+.Home .content {
+  text-align: center;
+  z-index: 10;
+  color: white;
+  font-size: 4rem;
+}
+.Home .content h3 {
+  font-size: 4.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+  background-color: orange;
+  border: 0.1px solid white;
+  border-radius: 5px;
+}
+.Home.content h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 5rem 0;
+}
+.Home .content button {
+  font-size: 20px;
+}
+.video-wrapper {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.video-wrapper video {
+  /* height: 100%; */
+  width: 100%;
+  object-fit: cover;
+}
+.Home .controls {
+  padding: 1rem;
+  border-radius: 5rem;
+  background: rgba(0, 0, 0, 0.7);
+  position: relative;
+  top: 10rem;
+}
+.Home .controls .vid-btn {
+  height: 2rem;
+  width: 2rem;
+  display: inline-block;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  margin: 0 0.5rem 0;
+  font-size: 20px;
+}
+.Home .controls.vid-btn.active {
+  background: var(--orange);
+}
+
+/*media queries */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 991px) {
+  header {
+    padding: 2rem;
+  }
+  .video-wrapper {
+    height: 95%;
+  }
+  .video-wrapper video {
+    height: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #menu-bar {
+    display: initial;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #333;
+    border-top: 0.1rem solid rgba(225, 255, 255, 0.2);
+    padding: 1rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .navbar a {
+    display: block;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: #222;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  .video-wrapper {
+    border: 2px solid #000;
+    width: 100%;
+    height: 900px;
+    position: absolute;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  video {
+    /* margin-top: 20%; */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* width: 100%; */
+  }
+
+  .content {
+    position: relative;
+    color: black;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.services .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.services .box-container .box {
+  flex: 1 1 30rem;
+  border-radius: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+.services .box-container .box i {
+  padding: 1rem;
+  font-size: 5rem;
+  color: orange;
+}
+.services .box-container .box h3 {
+  font-size: 2.5rem;
+  color: #333;
+}
+.services .box-container .box p {
+  font-size: 1.5rem;
+  color: #555;
+  padding: 1em 0;
+}
+.services .box-container .box:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0.2, 0.3);
+}
+.span_txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 5px;
+  border: 1px solid #330;
+  height: 35px;
+  width: 35px;
+  box-shadow: 0 0 15px orange inset;
+}
+.services .heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+/* .span_txt:hover{
+    background-color: rgb(231, 187, 106);
+} */
+.footer {
+  background-color: #333;
+  color: #eee;
+  padding: 0;
+}
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 4rem;
+}
+.footer .box-container .box {
+  padding: 1rem 0;
+  flex: 1 1 25rem;
+}
+.footer .box-container .box h3 {
+  font-size: 2.5rem;
+  padding: 0.7rem 0;
+  color: #fff;
+}
+.footer .box-container .box p {
+  font-size: 1.5rem;
+  padding: 0.7rem 0;
+  color: #eee;
+}
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  color: #eee;
+}
+.footer .box-container .box i {
+  display: block;
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  color: #eee;
+}
+.footer .box-container .box a:hover {
+  color: orangered;
+  text-decoration: underline;
+}
+.footer .box-container .box i:hover {
+  color: orangered;
+}
+.footer .credit {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  font-weight: normal;
+  color: #fff;
+  background-color: #001;
+  width: 100%;
+}
+.footer .credit span {
+  color: orangered;
+}
+.container {
+  height: 80vh;
+  width: 100%;
+  text-align: center;
+  /*background-image: url(https://i0.wp.com/stanzaliving.wpcomstaging.com/wp-content/uploads/2022/04/45251-places-to-visit-in-vijayawada.jpg?fit=1000%2C562&ssl=1);
+    background-repeat: no-repeat;*/
+}
+.explore_btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.btn {
+  border: 2px solid darkblue;
+  font-size: 25px;
+  padding: 10px 20px;
+  margin-right: 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px orange inset;
+}
+.btn:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0.2, 0.3);
+  background-color: 0 0 15px orange inset;
+}

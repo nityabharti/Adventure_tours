@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign up page</title>
+    <link rel="stylesheet" href="../css/signup.css" />
+  </head>
+  <body>
+    <div class="image">
+      <img src="../images/bg3.jpeg" />
+    </div>
+    <div class="signup_page">
+      <h1>Signup page</h1>
+      <form action="test.php" method="get">
+        <!-- <label for="fn">full name:</label> -->
+        <input
+          type="text"
+          id="fn"
+          autocomplete="off"
+          name="fullname"
+          placeholder="Full name"
+        />
+        <!-- <p>user name:</p> -->
+        <input
+          type="text"
+          name="last_name"
+          autocomplete="off"
+          placeholder="Last name"
+        />
+        <!-- <p>email:</p> -->
+        <input
+          type="email"
+          name="email"
+          autocomplete="off"
+          placeholder="Email"
+        />
+        <!-- <p>password</p> -->
+        <input
+          type="password"
+          name="password"
+          autocomplete="off"
+          placeholder="Password"
+        />
+        <input
+          type="password"
+          name="password"
+          autocomplete="off"
+          placeholder="Re-Password"
+        />
+        <div id="submit" type="submit">SignUp</div>
+      </form>
+    </div>
+  </body>
+</html>
